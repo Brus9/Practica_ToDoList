@@ -71,18 +71,17 @@
         $id = $_POST['ID'];
         $tarea = $_POST['tarea'];
 
-
-        $CREAR = "INSERT INTO usuarios AND tareas (tarea,id,)VALUES('$tarea','$id')";
+        $CREAR = "INSERT INTO tareas (tarea)VALUES('$tarea')";
 
         $resultado = mysqli_query($conexion, $CREAR);
         if (!$resultado) {
         } else {
           echo '<Script>
-                    alert("Usuario correctamente registrado ahora puede Iniciar sesion");
+                    alert("Trea agregada correctamente");
                     </Script>';
         }
       }
-      mysqli_close($conexion);
+
       ?>
 
       <div class="form-group">
@@ -100,6 +99,7 @@
         <input type="submit" value="Agregar Tarea" class="btn btn-success float-right" name="btnGuardar">
         <p><a href="index.php" style="color:black">SALIR</a></p>
       </div>
+      <?php mysqli_close($conexion); ?>
     </div>
   </div>
 </body>

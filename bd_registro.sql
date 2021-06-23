@@ -32,17 +32,14 @@ INSERT INTO tareas VALUES(nom, id_usuario);
 -----------------------------------------------------------------------
 select * from usuarios;
 select * from tareas;
--- call sp_insertar_tareas('06','comprar');
--- CALL sp_insertar_tareas;
--- SELECT * FROM tareas WHERE id_usuario = '01';
--- DELETE FROM tareas WHERE id_tareas = '02';
+
+-----------------------------------------------------------------------
 SELECT id_usuario, usuario, correo FROM usuarios WHERE correo = 'brus@gmail.com';
 SELECT nomtarea FROM tareas WHERE correo = 'brus@gmail.com';
-
-
+-----------------------------------------------------------------------
 SELECT U.id_usuario, U.usuario, T.id_tareas, T.nomtarea
 FROM usuarios U INNER JOIN tareas T ON U.id_usuario = T.id_usuario 
 WHERE correo = 'brus@gmail.com';
-
+-----------------------------------------------------------------------
 SELECT id_usuario FROM usuarios  
 WHERE correo = 'brus@gmail.com';
